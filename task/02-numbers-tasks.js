@@ -111,9 +111,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    let top = x1 * y1 + x2 * y2;
-    // let bot = Math.abs(x1 * y1) * Math.abs(x2 * y2);
-    return Math.acos(top)
+    return Math.abs(Math.atan(y1/x1) - Math.atan(y2/x2));
 }
 
 /**
@@ -183,7 +181,7 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    return num.toFixed(pow);
+    return Math.round(num / Math.pow(10, pow)) * Math.pow(10, pow);
 }
 
 /**
@@ -230,7 +228,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    return +value === def ? def : val
+    return Number(value) ? Number(value) : def;
 }
 
 module.exports = {
