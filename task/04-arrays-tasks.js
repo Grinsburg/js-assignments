@@ -38,9 +38,8 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-    let res = new Array(len).fill(0);
-    res.forEach((_, i, arr) => arr[i] = 2 * i + 1);
-    return res;
+    let arr = new Array(len);
+    return arr.map((len) => len);
 }
 
 
@@ -56,7 +55,7 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-    throw new Error('Not implemented');
+    return arr.concat(arr);
 }
 
 
@@ -72,7 +71,7 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-    throw new Error('Not implemented');
+    return arr.filter(item => item > 0)
 }
 
 /**
@@ -87,7 +86,7 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-    throw new Error('Not implemented');
+    return arr.filter(item=> item === String(item) ? item : '');
 }
 
 /**
@@ -104,7 +103,7 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-    throw new Error('Not implemented');
+    return arr.filter(item => item === Boolean)
 }
 
 /**
@@ -118,7 +117,7 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-    throw new Error('Not implemented');
+    return arr.map(item => item.toUpperCase());
 }
 
 
@@ -133,7 +132,7 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-    throw new Error('Not implemented');
+    return arr.map(item => item.length)
 }
 
 /**
@@ -148,7 +147,7 @@ function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-    throw new Error('Not implemented');
+    return arr
 }
 
 /**
@@ -177,7 +176,7 @@ function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 function getTail(arr, n) {
-    throw new Error('Not implemented');
+    return arr.slice(-2)
 }
 
 
@@ -202,7 +201,7 @@ function getTail(arr, n) {
  *    +'30,31,32,33,34'
  */
 function toCsvText(arr) {
-    throw new Error('Not implemented');
+    arr.join('\n')
 }
 
 /**
@@ -217,7 +216,7 @@ function toCsvText(arr) {
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 function toArrayOfSquares(arr) {
-    throw new Error('Not implemented');
+    return arr.map(item => item * item)
 }
 
 
@@ -251,7 +250,7 @@ function getMovingSum(arr) {
  * [ "a" ] => []
  */
 function getSecondItems(arr) {
-    throw new Error('Not implemented');
+    return arr.every(item[i] = 2)
 }
 
 
